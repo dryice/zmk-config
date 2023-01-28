@@ -11,8 +11,8 @@
 #define DEFAULT 0
 #define SYMBOLS 1
 #define NAVIGATION 2
-#define FUNCTIONS 3
-#define BLUETOOTH 4
+#define BLUETOOTH 3
+#define FUNCTIONS 4
 
 
 
@@ -81,6 +81,20 @@
                         >;
                 };
 
+                bluetooth_layer {
+// -----------------------------------------------------------------------------------------
+// | BTCLR|  1  |   2 |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |      |
+// |      |     |     |     |     |     |   |     | BT1 | BT2 |  BT3 | BT4 |  BT5   |
+// |      |     |     |     |     |     |   |     |     |     |     |     |      |
+//                    |     |     |     |   |     |     |     |
+                        bindings = <
+   &bt BT_CLR    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5    &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &trans
+   &trans &trans &trans &trans &trans &trans   &trans &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4
+   &trans  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
+                          	        &trans     &trans       &trans      &trans  &trans   &trans
+                        >;
+                };
+
                 function_layer {
 // -----------------------------------------------------------------------------------------
 // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
@@ -95,19 +109,6 @@
                         >;
                 };
 
-                bluetooth_layer {
-// -----------------------------------------------------------------------------------------
-// | BTCLR|  1  |   2 |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |      |
-// |      |     |     |     |     |     |   |     | BT1 | BT2 |  BT3 | BT4 |  BT5   |
-// |      |     |     |     |     |     |   |     |     |     |     |     |      |
-//                    |     |     |     |   |     |     |     |
-                        bindings = <
-   &bt BT_CLR    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5    &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &trans
-   &trans &trans &trans &trans &trans &trans   &trans &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4
-   &trans  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
-                          	        &trans     &trans       &trans      &trans  &trans   &trans
-                        >;
-                };
 
 
         };
