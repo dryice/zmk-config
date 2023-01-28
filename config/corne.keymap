@@ -21,16 +21,14 @@
 / {
         behaviors {
                 bhm: balanced_homerow_mods {
-                compatible = "zmk,behavior-hold-tap";
-                label = "HOMEROW_MODS";
-                #binding-cells = <2>;
-                tapping-term-ms = <200>;    // <---[[moderate duration]]
-                quick-tap-ms = <400>;
-                flavor = "balanced";
-                bindings = <&kp>, <&kp>;
+                        compatible = "zmk,behavior-hold-tap";
+                        label = "HOMEROW_MODS";
+                        #binding-cells = <2>;
+                        tapping-term-ms = <200>;    // <---[[moderate duration]]
+                        quick-tap-ms = <400>;
+                        flavor = "balanced";
+                        bindings = <&kp>, <&kp>;
                 };
-
-        behaviors {
                 mo_tog: behavior_mo_tog {
                         compatible = "zmk,behavior-hold-tap";
                         label = "mo_tog";
@@ -39,8 +37,6 @@
                         tapping-term-ms = <200>;
                         bindings = <&mo>, <&tog>;
                 };
-        };
-
         };
 
         // conditional_layers {
