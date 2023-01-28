@@ -15,7 +15,7 @@
 #define FUNCTIONS 4
 
 // Macro to apply momentary-layer-on-hold/toggle-layer-on-tap to a specific layer
-#define MO_TOG(layer) &mo_tog layer layer
+// #define MO_TOG(layer) &mo_tog layer layer
 
 
 / {
@@ -29,6 +29,7 @@
                         flavor = "balanced";
                         bindings = <&kp>, <&kp>;
                 };
+
                 mo_tog: behavior_mo_tog {
                         compatible = "zmk,behavior-hold-tap";
                         label = "mo_tog";
@@ -59,8 +60,8 @@
                         bindings = <
    &kp ESC   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp MINUS
    &kp LCTRL &bhm LSHIFT A &bhm LALT S &bhm LGUI D &bhm LCTRL F &kp G   &kp H &bhm RCTRL J  &bhm RGUI K   &bhm RALT L   &bhm RSHIFT SEMI &kp SQT
-   MO_TOG(FUNCTIONS) &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH MO_TOG(BLUETOOTH)
-                  MO_TOG(SYMBOLS) &kp TAB &kp BSPC   &kp RET &kp SPACE MO_TOG(NAVIGATION)
+   &mo_tog FUNCTIONS FUNCTIONS &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &mo_tog BLUETOOTH BLUETOOTH
+                  &mo_tog SYMBOLS SYMBOLES &kp TAB &kp BSPC   &kp RET &kp SPACE &mo_tog NAVIGATION NAVIGATION
                         >;
                 };
 
