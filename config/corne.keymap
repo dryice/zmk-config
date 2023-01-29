@@ -60,7 +60,7 @@
                         bindings = <
    &kp ESC   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp MINUS
    &kp LCTRL &bhm LSHIFT A &bhm LALT S &bhm LGUI D &bhm LCTRL F &kp G   &kp H &bhm RCTRL J  &bhm RGUI K   &bhm RALT L   &bhm RSHIFT SEMI &kp SQT
-   &kp LEFT_SHIFT Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &mo_tog BLUETOOTH FUNCTIONS
+   &kp LSHIFT Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &mo BLUETOOTH
                   MO_TOG(SYMBOLS) &kp TAB &kp BSPC   &kp RET &kp SPACE MO_TOG(NAVIGATION)
                         >;
                 };
