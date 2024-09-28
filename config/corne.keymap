@@ -124,9 +124,6 @@
                         >;
                 };
 
-        };
-};
-
 
 // // This is for https://github.com/zmkfirmware/zmk/pull/2027
 //                 mouse_layer {
