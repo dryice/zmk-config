@@ -69,12 +69,12 @@
 // |  ESC |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | MINUS |
 // | CAPS |  LS/A  |  LA/S  |  LG/D  |  LC/F  |  G  |   |  H  |  RC/J   |  RG/K  |  RA/L  |  RS/;  |  '   |
 // | DEF|  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | BLT/FUNC  |
-//                    | SYM | TAB | MOUSE/BKSP |   | MOUSE/ENT | SPACE  | NAV |
+//                    | SYM | TAB | BKSP |   | ENT | SPACE  | NAV |
                         bindings = <
    &kp ESC   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp MINUS
    &kp CAPS &bhm LSHIFT A &bhm LALT S &bhm LGUI D &bhm LCTRL F &kp G   &kp H &bhm RCTRL J  &bhm RGUI K   &bhm RALT L   &bhm RSHIFT SEMI &kp SQT
    &to DEFAULT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &mo_tog BLUETOOTH FUNCTIONS
-                  &mo_tog SYMBOLS MOUSE &kp TAB &kp_mo BSPC MOUSE   &kp_mo RET MOUSE &kp SPACE MO_TOG(NAVIGATION)
+                  &mo_tog SYMBOLS MOUSE &kp TAB &kp BSPC    &kp RET  &kp SPACE MO_TOG(NAVIGATION)
                         >;
                 };
 
