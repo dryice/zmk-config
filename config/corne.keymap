@@ -14,7 +14,7 @@
 #define NAVIGATION 2
 #define BLUETOOTH 3
 #define FUNCTIONS 4
-#define MOUSE 5
+// #define MOUSE 5
 
 // Macro to apply momentary-layer-on-hold/toggle-layer-on-tap to a specific layer
 #define MO_TOG(layer) &mo_tog layer layer
@@ -74,7 +74,7 @@
    &kp ESC   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp MINUS
    &kp CAPS &bhm LSHIFT A &bhm LALT S &bhm LGUI D &bhm LCTRL F &kp G   &kp H &bhm RCTRL J  &bhm RGUI K   &bhm RALT L   &bhm RSHIFT SEMI &kp SQT
    &to DEFAULT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &mo_tog BLUETOOTH FUNCTIONS
-                  &mo_tog SYMBOLS MOUSE &kp TAB &kp BSPC    &kp RET  &kp SPACE MO_TOG(NAVIGATION)
+                  MO_TOG(SYMBOLS)  &kp TAB &kp BSPC    &kp RET  &kp SPACE MO_TOG(NAVIGATION)
                         >;
                 };
 
@@ -134,20 +134,20 @@
                         >;
                 };
 
-// This is for https://github.com/zmkfirmware/zmk/pull/2027
-                mouse_layer {
-// -----------------------------------------------------------------------------------------
-// |      |      |      |      |     |        |   |  MClick  |  RClick   | MOVE_UP   |    |    |  |
-// |      | none | none | none | none| LClick |   | LClick   | MOVE_LEFT |  MOVE_DOWN | MOVE_RIGHT | none |  none |
-// |      | none | none | none | none | none  |   | none     | SCRL_UP | SCRL_DOWN  | SCRL_LEFT | SCRL_RIGHT |      |
-//                    |     |     |     |   |     |     |     |
-                        bindings = <
-   &trans  &trans  &trans   &trans   &trans   &trans      &mkp MCLK  &mkp RCLK       &mmv MOVE_UP     &none           &none &none
-   &trans  &trans  &trans   &trans   &trans   &mkp LCLK   &mkp LCLK  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans &trans
-   &trans  &trans  &trans   &trans   &trans   &trans      &trans     &msc SCRL_UP  &msc SCRL_DOWN  &msc SCRL_LEFT  &msc SCRL_RIGHT &trans
-                          	        &trans     &trans       &trans      &trans  &trans   &trans
-                        >;
-                };
+// // This is for https://github.com/zmkfirmware/zmk/pull/2027
+//                 mouse_layer {
+// // -----------------------------------------------------------------------------------------
+// // |      |      |      |      |     |        |   |  MClick  |  RClick   | MOVE_UP   |    |    |  |
+// // |      | none | none | none | none| LClick |   | LClick   | MOVE_LEFT |  MOVE_DOWN | MOVE_RIGHT | none |  none |
+// // |      | none | none | none | none | none  |   | none     | SCRL_UP | SCRL_DOWN  | SCRL_LEFT | SCRL_RIGHT |      |
+// //                    |     |     |     |   |     |     |     |
+//                         bindings = <
+//    &trans  &trans  &trans   &trans   &trans   &trans      &mkp MCLK  &mkp RCLK       &mmv MOVE_UP     &none           &none &none
+//    &trans  &trans  &trans   &trans   &trans   &mkp LCLK   &mkp LCLK  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans &trans
+//    &trans  &trans  &trans   &trans   &trans   &trans      &trans     &msc SCRL_UP  &msc SCRL_DOWN  &msc SCRL_LEFT  &msc SCRL_RIGHT &trans
+//                           	        &trans     &trans       &trans      &trans  &trans   &trans
+//                         >;
+//                 };
 
 
 
