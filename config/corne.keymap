@@ -140,14 +140,14 @@
 
                 pointer_layer {
 // -----------------------------------------------------------------------------------------
-// |      |      |      |      |     |        |   |  none  |  LClick   | RClick   |    |    |  |
-// | DFT  | LS   | LA   | LG   | LC  | LClick |   | MOVE_LEFT   | MOVE_DOWN |  MOVE_UP | MOVE_RIGHT | none |  none |
-// |      | none | none | none | none | none  |   | none     | none | none  | none | none |      |
+// |      |      |      |      |     |        |   |  none       |  LClick    | RClick      |             |    |  |
+// | DFT  | LS   | LA   | LG   | LC  | LClick |   | MOVE_LEFT   | MOVE_DOWN  |  MOVE_UP    | MOVE_RIGHT  | none |  none |
+// |      | none | none | none | none | none  |   | mov_l_slow  | mov_d_slow | mov_u_slow  | move_r_slow | none |      |
 //                    |     |     |     |   |     |     |     |
                         bindings = <
-   &none         &none       &none      &none      &none       &none            &none           &mkp LCLK       &mkp RCLK     &none            &none &none
-   &to DEFAULT   &kp LSHIFT  &kp LALT   &kp LGUI   &kp LCTRL   &mkp LCLK        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &none &none
-   &trans        &none       &none      &none      &none       &none            &none           &none           &none         &none            &none &trans
+   &none         &none       &none      &none      &none       &none            &none              &mkp LCLK           &mkp RCLK         &none            &none &none
+   &to DEFAULT   &kp LSHIFT  &kp LALT   &kp LGUI   &kp LCTRL   &mkp LCLK        &mmv MOVE_LEFT     &mmv MOVE_DOWN      &mmv MOVE_UP      &mmv MOVE_RIGHT  &none &none
+   &trans        &none       &none      &none      &none       &none            &nmmv MOVE_X(-50)  &mmv MOVE_Y(-50)    &mmv MOVE_Y(50)   &mmv MOVE_X(50)  &none &trans
                           	        &trans     &trans       &trans      &trans  &trans   &trans
                         >;
                 };
