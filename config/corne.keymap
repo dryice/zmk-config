@@ -142,12 +142,12 @@
 // -----------------------------------------------------------------------------------------
 // |      |      |      |      |     |        |   |  none       |  LClick    | RClick      |             |    |  |
 // | DFT  | LS   | LA   | LG   | LC  | LClick |   | MOVE_LEFT   | MOVE_DOWN  |  MOVE_UP    | MOVE_RIGHT  | none |  none |
-// |      | none | none | none | none | none  |   | SCRL_LEFT   | SCRL_DOWN  |  SCRL_UP    | SCRL_RIGHTw | none |      |
+// |      | none | none | none | none | none  |   | SCRL_RIGHTw | SCRL_UP    |   SCRL_DOWN | SCRL_LEFT   | none |      |
 //                    |     |     |     |   |     |     |     |
                         bindings = <
    &trans        &none       &none      &none      &none       &none            &none              &mkp LCLK           &mkp RCLK         &none            &none &none
    &to DEFAULT   &kp LSHIFT  &kp LALT   &kp LGUI   &kp LCTRL   &mkp LCLK        &mmv MOVE_LEFT     &mmv MOVE_DOWN      &mmv MOVE_UP      &mmv MOVE_RIGHT  &none &none
-   &trans        &none       &none      &none      &none       &none            &msc SCRL_LEFT     &msc SCRL_DOWN      &msc SCRL_UP      &msc SCRL_RIGHT  &none &trans
+   &trans        &none       &none      &none      &none       &none            &msc SCRL_RIGHT    &msc SCRL_UP        &msc SCRL_DOWN    &msc SCRL_LEFT  &none &trans
                           	        &trans     &trans       &trans      &trans  &trans   &trans
                         >;
                 };
